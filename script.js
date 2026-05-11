@@ -6,100 +6,56 @@
 const projects = [
   {
     id: 1,
-    title: "GoRent - Sistem Rental Kendaraan Modern",
+    title: "Website Pondok Pesantren Al Ijma Garut",
     category: "Web Application",
-    desc: "template website rental kendaraan modern yang memudahkan pelanggan melihat katalog kendaraan, menghitung biaya sewa, dan melakukan booking langsung ke WhatsApp dalam satu klik. Dibuat ringan dan sederhana tanpa backend, sehingga cocok digunakan untuk bisnis rental kendaraan maupun sebagai produk digital siap pakai.",
-    url: "https://placehold.co/800x600/06b6d4/ffffff?text=GoRent",
+    desc: "Website profil Pondok Pesantren Al Ijma yang menampilkan informasi lengkap tentang profil pesantren, program pendidikan salafiyah, kegiatan santri, serta jaringan komunitas global alumni internasional. Dibuat dengan desain modern dan responsif untuk memperkenalkan pesantren kepada masyarakat luas.",
+    url: "https://placehold.co/800x600/22c55e/ffffff?text=al+ijma",
     year: "2026",
     duration: "3 minggu",
     tags: ["html", "css", "JavaScript"],
     results: [
-      "Mengembangkan sistem manajemen berbasis web yang mampu memproses ribuan data pengguna secara efisien.",
-      "Meningkatkan kecepatan akses data hingga 30% dengan optimasi struktur data dan UI",
-      "Membuat sistem booking online yang mempermudah pelanggan melakukan pemesanan dalam 1 klik ke WhatsApp.",
+        "Mengembangkan website profil pesantren dengan tampilan modern yang menampilkan profil, program pendidikan, dan kegiatan santri secara terstruktur.",
+        "Meningkatkan kecepatan akses dan pengalaman pengguna dengan desain responsif yang optimal di berbagai perangkat.",
+        "Membuat sistem informasi digital yang memudahkan calon santri dan masyarakat mengenal Pondok Pesantren Al Ijma secara online.",
     ],
-    liveUrl: "http://lynk.id/jagoweb/92r2lzo961nz",
+    liveUrl: "https://jagoweb35.github.io/Pondok-Pesantren-Al-Ijma/",
   },
   {
     id: 2,
-    title: "JastipKu – Jasa Titip Barang Luar Negeri",
+    title: "Website SMP Boarding School RABBANY",
     category: "Web Application",
-    desc: "website jasa titip barang dari luar negeri yang menghubungkan customer dengan traveler terpercaya. Pengguna dapat memesan barang dari kota populer seperti Tokyo, Bangkok, Seoul, dan Kuala Lumpur dengan sistem yang mudah, transparan, dan aman",
-    url: "https://placehold.co/800x600/06b6d4/000080?text=JastipKu",
+    desc: "Website profil SMP Boarding School RABBANY yang berlokasi di Garut, Jawa Barat. Menampilkan informasi lengkap mengenai profil sekolah, program pendidikan boarding school, fasilitas, kegiatan siswa, dan sistem informasi akademik untuk memudahkan orang tua dan calon siswa mengenal sekolah secara digital.",
+    url: "https://placehold.co/800x600/1e3a8a/ffffff?text=SMP+RABBANY",
     year: "2026",
     duration: "3 minggu",
-    tags: ["html", "css", "JavaScript"],
+    tags: ["HTML", "CSS", "JavaScript"],
     results: [
-      "Mengembangkan platform jasa titip berbasis web dengan fitur filter rute dan katalog produk interaktif.",
-      "Mengotomatisasi perhitungan estimasi biaya jastip untuk meningkatkan transparansi harga bagi pengguna.",
-      "Mengintegrasikan sistem pemesanan 1-klik ke WhatsApp untuk mempercepat proses order pelanggan.",
+        "Mengembangkan website profil sekolah boarding yang menampilkan informasi program pendidikan, fasilitas, dan kegiatan siswa secara terstruktur.",
+        "Meningkatkan aksesibilitas informasi sekolah dengan desain responsif yang optimal di perangkat mobile dan desktop.",
+        "Membangun sistem informasi digital yang memudahkan calon siswa dan orang tua mengakses profil SMP Boarding School RABBANY secara online."
     ],
-    liveUrl: "http://lynk.id/jagoweb/1wmwd9dmv6vn",
+    liveUrl: "https://jagoweb35.github.io/SMP-Boarding-School-RABBANY/"
   },
-  {
+ {
     id: 3,
-    title: "KosManager - Sistem Manajemen Kos & Kontrakan",
+    title: "Universal Data Entry System",
     category: "Web Application",
-    desc: "KosManager — Sistem manajemen kos berbasis web untuk membantu pemilik mengelola data penghuni, tagihan bulanan, pengingat pembayaran, dan laporan keuangan dalam satu platform.",
-    url: "https://placehold.co/800x600/06b6d4/000080?text=KosManager",
+    desc: "Sistem manajemen data serbaguna berbasis web yang memungkinkan pengguna untuk melakukan entry data secara efisien melalui form input, mengimport data dari file CSV, serta mengelola berbagai jenis data seperti data karyawan dalam satu platform tanpa memerlukan backend server.",
+    url: "https://placehold.co/800x600/f8fafc/334155?text=Universal+Data+Entry",
     year: "2026",
     duration: "3 minggu",
-    tags: ["html", "css", "JavaScript"],
+    tags: ["HTML", "CSS", "JavaScript"],
     results: [
-      "Mengembangkan sistem manajemen kos dengan fitur pengelolaan data penghuni dan tagihan bulanan.",
-      "Menyediakan dashboard analitik dan grafik laporan keuangan untuk memantau pemasukan.",
-      "Menyimpan data secara client-side menggunakan LocalStorage tanpa memerlukan backend server.",
+        "Mengembangkan sistem data entry universal dengan fitur form input dan import CSV untuk berbagai kebutuhan data management.",
+        "Membuat antarmuka yang menampilkan statistik data real-time seperti total records dan data yang ditambahkan hari ini.",
+        "Mengimplementasikan sistem tanpa backend yang memungkinkan pengelolaan data karyawan dan jenis data lainnya secara lokal.",
+        "Meningkatkan efisiensi input data dengan desain form yang intuitif dan responsif di berbagai perangkat."
     ],
-    liveUrl: "https://t.co/AP5Fv1PMWp",
+    liveUrl: "https://jagoweb35.github.io/DataEntry/"
   },
-  {
-    id: 4,
-    title: "SchoolOS – Sistem Manajemen Sekolah Berbasis Web",
-    category: "Web Application",
-    desc: "SchoolOS — Aplikasi manajemen sekolah berbasis web untuk mengelola data akademik, jadwal, nilai, absensi, dan pengumuman dalam satu sistem dengan akses Admin, Guru, dan Siswa.",
-    url: "https://placehold.co/800x600/06b6d4/000080?text=SchoolOS",
-    year: "2026",
-    duration: "3 minggu",
-    tags: ["html", "css", "JavaScript"],
-    results: [
-      "Mengembangkan sistem manajemen sekolah dengan multi-role login (Admin, Guru, Siswa).",
-      "Menyediakan fitur pengelolaan akademik seperti jadwal, nilai, absensi, dan pengumuman.",
-      "Menampilkan dashboard statistik sekolah dengan grafik menggunakan Chart.js.",
-    ],
-    liveUrl: "https://t.co/g665wSdHJv",
-  },
-  {
-    id: 5,
-    title: "WarungPOS – Sistem Kasir UMKM",
-    category: "Web Application",
-    desc: "WarungPOS — Aplikasi kasir berbasis web untuk membantu warung, cafe, dan UMKM mengelola produk, transaksi penjualan, serta laporan dengan lebih mudah dan rapi.",
-    url: "https://placehold.co/800x600/06b6d4/000080?text=WarungPOS",
-    year: "2026",
-    duration: "3 minggu",
-    tags: ["html", "css", "JavaScript"],
-    results: [
-      " Mengembangkan sistem POS sederhana dengan fitur manajemen produk dan transaksi penjualan. ",
-      " Menyediakan laporan penjualan dan riwayat transaksi dalam satu dashboard. ",
-      " Menyimpan data menggunakan LocalStorage sehingga dapat berjalan tanpa database server. ",
-    ],
-    liveUrl: "https://t.co/wxcxWJhTT0",
-  },
-  {
-    id: 6,
-    title: "SportSpace – Sistem Booking Lapangan Olahraga",
-    category: "Web Application",
-    desc: "SportSpace — Aplikasi pemesanan lapangan olahraga berbasis web yang memungkinkan pelanggan melakukan booking secara online dan admin mengelola serta mengonfirmasi pesanan dalam satu sistem.",
-    url: "https://placehold.co/800x600/06b6d4/000080?text=WarungPOS",
-    year: "2026",
-    duration: "3 minggu",
-    tags: ["html", "css", "JavaScript"],
-    results: [
-      " Mengembangkan sistem booking lapangan dengan portal pelanggan dan portal admin yang terintegrasi. ",
-      " Menyediakan fitur pemesanan lapangan, pelacakan status booking, serta dashboard statistik untuk admin. ",
-      " Menyimpan data menggunakan LocalStorage sehingga sistem dapat berjalan tanpa database server. ",
-    ],
-    liveUrl: "https://t.co/ZaDsj3nWvX",
-  },
+  
+
+  
 ];
 
 // ========== STATE ==========
