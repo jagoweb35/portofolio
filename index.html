@@ -2,131 +2,221 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M Fitroh Sodikin - Portofolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Portofolio profesional M Fitroh Sodikin - Lulusan S1 Teknik Informatika AI dengan keahlian data, IT support, dan administrasi.">
+    <meta name="keywords" content="M Fitroh Sodikin, Teknik Informatika, AI, Data Analyst, IT Support, Garut, Indonesia">
+    <meta name="author" content="M Fitroh Sodikin">
+    <meta property="og:title" content="M Fitroh Sodikin - Portofolio Profesional">
+    <meta property="og:description" content="Lulusan S1 Teknik Informatika AI dengan pengalaman dalam pengolahan data, IT support, dan administrasi.">
+    <meta property="og:type" content="website">
+    <title>M Fitroh Sodikin - Portofolio Profesional</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+<base target="_blank">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-ring"></div>
+            <div class="loader-text">M Fitroh <span class="highlight">Sodikin</span></div>
+            <div class="loader-subtitle">Memuat portofolio...</div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Particles Background -->
+    <canvas id="particlesCanvas" class="particles-canvas"></canvas>
+
     <!-- Navigation -->
     <nav id="navbar">
-        <a href="#" class="logo">Fitroh</a>
+        <a href="#" class="logo">
+            <span class="logo-icon">F</span>
+            <!-- <span class="logo-text"><span class="highlight">.</span></span> -->
+        </a>
         <ul class="nav-links">
-            <li><a href="#home">Beranda</a></li>
-            <li><a href="#about">Tentang</a></li>
-            <li><a href="#skills">Keahlian</a></li>
-            <li><a href="#experience">Pengalaman</a></li>
-            <li><a href="#certificates">Sertifikat</a></li>
-            <li><a href="#education">Pendidikan</a></li>
-            <li><a href="#contact">Kontak</a></li>
+            <li><a href="#home" class="nav-link active">Beranda</a></li>
+            <li><a href="#about" class="nav-link">Tentang</a></li>
+            <li><a href="#skills" class="nav-link">Keahlian</a></li>
+            <li><a href="#projects" class="nav-link">Proyek</a></li>
+            <li><a href="#experience" class="nav-link">Pengalaman</a></li>
+            <li><a href="#certificates" class="nav-link">Sertifikat</a></li>
+            <li><a href="#education" class="nav-link">Pendidikan</a></li>
+            <li><a href="#contact" class="nav-link">Kontak</a></li>
         </ul>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" title="Ubah Tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <a href="#contact" class="btn btn-nav">Hubungi Saya</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
     <!-- Mobile Menu -->
     <div class="overlay" id="overlay"></div>
     <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">Fitroh<span class="highlight">.</span></span>
+            <button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button>
+        </div>
         <ul>
             <li><a href="#home" class="mobile-link">Beranda</a></li>
             <li><a href="#about" class="mobile-link">Tentang</a></li>
             <li><a href="#skills" class="mobile-link">Keahlian</a></li>
+            <li><a href="#projects" class="mobile-link">Proyek</a></li>
             <li><a href="#experience" class="mobile-link">Pengalaman</a></li>
             <li><a href="#certificates" class="mobile-link">Sertifikat</a></li>
             <li><a href="#education" class="mobile-link">Pendidikan</a></li>
             <li><a href="#contact" class="mobile-link">Kontak</a></li>
         </ul>
+        <div class="mobile-menu-footer">
+            <a href="mailto:mfitrohsodikin@gmail.com" class="mobile-contact-btn">
+                <i class="fas fa-envelope"></i> mfitrohsodikin@gmail.com
+            </a>
+        </div>
     </div>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
         <div class="hero-content">
-            <!-- <div class="hero-badge">
+            <!-- <div class="hero-badge reveal">
                 <span class="dot"></span>
-                Tersedia untuk Kerja
+                Tersedia untuk Kerja Sama
             </div> -->
-            <h1>
+            <h1 class="reveal">
                 M Fitroh <span class="highlight">Sodikin</span>
             </h1>
-            <p class="hero-subtitle">Lulusan S1 Teknik Informatika - Konsentrasi AI</p>
-            <p class="hero-desc">
-                Berpengalaman dalam pengolahan data, administrasi, pengoperasian komputer, dan teknologi informasi. Teliti, disiplin, dan cepat beradaptasi dengan lingkungan baru.
+            <p class="hero-subtitle reveal">Lulusan S1 Teknik Informatika - Konsentrasi AI</p>
+            <p class="hero-desc reveal">
+                Berpengalaman dalam pengolahan data, administrasi, pengoperasian komputer, dan teknologi informasi. 
+                Teliti, disiplin, dan cepat beradaptasi dengan lingkungan baru.
             </p>
-            <div class="hero-stats">
+            <div class="hero-stats reveal">
                 <div class="hero-stat">
-                    <h4>2+</h4>
+                    <div class="stat-number" data-target="2">0</div>
+                    <span class="stat-suffix">+</span>
                     <p>Tahun Pengalaman</p>
                 </div>
                 <div class="hero-stat">
-                    <h4>S1</h4>
-                    <p>Teknik Informatika - AI</p>
+                    <div class="stat-number" data-target="100">0</div>
+                    <span class="stat-suffix">+</span>
+                    <p>Data Diproses</p>
                 </div>
                 <div class="hero-stat">
-                    <h4>2</h4>
-                    <p>Pengalaman Magang</p>
+                    <div class="stat-number" data-target="2">0</div>
+                    <p>Magang Selesai</p>
                 </div>
             </div>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">
+            <div class="hero-buttons reveal">
+                <a href="#contact" class="btn btn-primary magnetic-btn">
                     <i class="fas fa-envelope"></i>
                     Hubungi Saya
                 </a>
-                <a href="#certificates" class="btn btn-outline">
-                    <i class="fas fa-certificate"></i>
-                    Lihat Sertifikat
+                <a href="#projects" class="btn btn-outline magnetic-btn">
+                    <i class="fas fa-folder-open"></i>
+                    Lihat Proyek
+                </a>
+                <a href="assets/cv/CV_M%20FITROH%20SODIKIN.pdf" class="btn btn-ghost magnetic-btn" download="CV_M FITROH SODIKIN.pdf">
+                     <i class="fas fa-download"></i>
+                     Unduh CV
                 </a>
             </div>
         </div>
+        <!-- <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Gulir ke bawah</span>
+        </div> -->
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
         <div class="section-header reveal">
             <span class="section-label">Tentang Saya</span>
-            <h2>Profil Singkat</h2>
+            <h2>Profil <span class="highlight">Singkat</span></h2>
             <p>Latar belakang dan keunggulan saya dalam dunia kerja.</p>
         </div>
-        <div class="about-content reveal">
-            <h3>Lulusan Teknik Informatika - AI dengan Fokus Data & Operasional</h3>
-            <p>
-                Saya adalah lulusan S1 Teknik Informatika dengan konsentrasi Artificial Intelligence dari Institut Teknologi Garut. Memiliki keahlian dalam pengolahan data, administrasi, dan pengoperasian komputer serta teknologi informasi.
-            </p>
-            <p>
-                Memiliki pengalaman dalam pengecekan data, penyortiran barang, dan dukungan operasional kerja. Terbiasa bekerja teliti, disiplin, dan mampu beradaptasi dengan lingkungan serta pekerjaan baru, baik secara individu maupun dalam tim.
-            </p>
-            <div class="about-info">
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h4>Email</h4>
-                        <p>mfitrohsodikin@gmail.com</p>
+        <div class="about-container reveal">
+            <div class="about-image">
+                <div class="image-frame">
+                    <!-- <div class="image-placeholder">
+                        <i class="fas fa-user"></i>
+                        <span>Foto Profil</span>
+                    </div> -->
+                    <div class="image-frame">
+                        <img src="assets/Image/FOTO FORMAL AFIT.jpg" alt="M Fitroh Sodikin" class="profile-img">
+                        <div class="image-decoration"></div>
+                    </div>
+                    <div class="image-decoration"></div>
+                </div>
+                <div class="experience-float">
+                    <div class="float-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="float-text">
+                        <strong>2+</strong>
+                        <span>Tahun Pengalaman</span>
                     </div>
                 </div>
-                <div class="info-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h4>Telepon</h4>
-                        <p>628997480801</p>
+            </div>
+            <div class="about-content">
+                <h3>Lulusan Teknik Informatika dengan Konsentrasi AI</h3>
+                <p>
+                    Saya adalah lulusan S1 Teknik Informatika dengan konsentrasi Artificial Intelligence dari Institut Teknologi Garut. 
+                    Memiliki keahlian dalam pengolahan data, administrasi, dan pengoperasian komputer serta teknologi informasi.
+                </p>
+                <p>
+                    Memiliki pengalaman dalam pengecekan data, penyortiran barang, dan dukungan operasional kerja. 
+                    Terbiasa bekerja teliti, disiplin, dan mampu beradaptasi dengan lingkungan serta pekerjaan baru, 
+                    baik secara individu maupun dalam tim.
+                </p>
+                <div class="about-info">
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info-text">
+                            <h4>Email</h4>
+                            <p>mfitrohsodikin@gmail.com</p>
+                        </div>
                     </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h4>Lokasi</h4>
-                        <p>Garut, Indonesia</p>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-phone"></i></div>
+                        <div class="info-text">
+                            <h4>Telepon</h4>
+                            <p>+62 899 7480 801</p>
+                        </div>
                     </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-graduation-cap"></i>
-                    <div>
-                        <h4>Pendidikan</h4>
-                        <p>S1 Teknik Informatika - AI</p>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-text">
+                            <h4>Lokasi</h4>
+                            <p>Garut, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="info-text">
+                            <h4>Pendidikan</h4>
+                            <p>S1 Teknik Informatika - AI</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -137,76 +227,182 @@
     <section class="skills" id="skills">
         <div class="section-header reveal">
             <span class="section-label">Keahlian</span>
-            <h2>Hard Skills & Soft Skills</h2>
+            <h2>Hard Skills & <span class="highlight">Soft Skills</span></h2>
             <p>Kemampuan teknis dan interpersonal yang saya miliki.</p>
         </div>
-        <div class="skills-grid">
-            <div class="skill-card reveal">
-                <div class="skill-icon">
-                    <i class="fas fa-table"></i>
+        <div class="skills-container">
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fas fa-table"></i></div>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <h3>Microsoft Excel</h3>
+                    <p>Menguasai Microsoft Excel seperti Pivot Table, VLOOKUP, pengolahan dan untuk mendukung administrasi dan operasional.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pivot Table</span>
+                        <span class="skill-tag">VLOOKUP</span>
+                        <span class="skill-tag">Data Input</span>
+                    </div>
                 </div>
-                <h3>Microsoft Excel</h3>
-                <p>Menguasai Microsoft Excel seperti Pivot Table, VLOOKUP, pengolahan dan untuk mendukung administrasi dan operasional.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Pivot Table</span>
-                    <span class="skill-tag">VLOOKUP</span>
-                    <span class="skill-tag">Data Input</span>
+                <div class="skill-card reveal">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="90"></div>
+                        </div>
+                    </div>
+                    <h3>Administrasi Dokumen</h3>
+                    <p>Pengarsipan data, manajemen dokumen, dan pengorganisasian informasi secara sistematis.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pengarsipan</span>
+                        <span class="skill-tag">Manajemen Data</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fas fa-check-double"></i></div>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="88"></div>
+                        </div>
+                    </div>
+                    <h3>Pengolahan & Validasi Data</h3>
+                    <p>Melakukan pengecekan, validasi, dan pengolahan data dengan tingkat akurasi tinggi.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Validasi</span>
+                        <span class="skill-tag">Pengecekan</span>
+                        <span class="skill-tag">Akurasi</span>
+                        <span class="skill-tag">Quality Control</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="75"></div>
+                        </div>
+                    </div>
+                    <h3>Pengembangan Web Dasar</h3>
+                    <p>Kemampuan dasar dalam membangun website menggunakan HTML, CSS, dan JavaScript.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="80"></div>
+                        </div>
+                    </div>
+                    <h3>Sistem & Teknologi Informasi</h3>
+                    <p>Pengoperasian sistem komputer dan teknologi informasi untuk mendukung operasional.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">IT Support</span>
+                        <span class="skill-tag">Helpdesk</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                        <div class="skill-progress">
+                            <div class="progress-bar" data-progress="70"></div>
+                        </div>
+                    </div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Pengetahuan tentang konsep AI, machine learning, dan penerapannya dalam konteks teknologi informasi.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Data Processing</span>
+                    </div>
                 </div>
             </div>
-            <div class="skill-card reveal">
-                <div class="skill-icon">
-                    <i class="fas fa-file-alt"></i>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-header reveal">
+            <span class="section-label">Proyek</span>
+            <h2>Proyek <span class="highlight">Unggulan</span></h2>
+            <p>Proyek dan pengalaman praktis yang telah saya kerjakan.</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <div class="project-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <div class="project-overlay">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
-                <h3>Administrasi Dokumen</h3>
-                <p>Pengarsipan data, manajemen dokumen, dan pengorganisasian informasi secara sistematis.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Pengarsipan</span>
-                    <span class="skill-tag">Manajemen Data</span>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <div class="skill-icon">
-                    <i class="fas fa-check-double"></i>
-                </div>
-                <h3>Pengolahan & Validasi Data</h3>
-                <p>Melakukan pengecekan, validasi, dan pengolahan data dengan tingkat akurasi tinggi.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Validasi</span>
-                    <span class="skill-tag">Pengecekan</span>
-                    <span class="skill-tag">Akurasi</span>
-                </div>
-            </div>
-            <div class="skill-card reveal">
-                <div class="skill-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h3>Pengembangan Web Dasar</h3>
-                <p>Kemampuan dasar dalam membangun website menggunakan HTML, CSS, dan JavaScript.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">JavaScript</span>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="project-tag">AI</span>
+                        <span class="project-tag">Computer Vision</span>
+                        <span class="project-tag">Python</span>
+                    </div>
+                    <h3>Deteksi Angka Meteran Air Analog</h3>
+                    <p>Sistem deteksi angka pada meteran air analog berbasis teknologi informasi untuk membantu proses pembacaan meter secara otomatis menggunakan AI dan computer vision.</p>
+                    <div class="project-stats">
+                        <span><i class="fas fa-database"></i> 500+ Data</span>
+                        <span><i class="fas fa-check-circle"></i> Validasi Sistem</span>
+                    </div>
                 </div>
             </div>
-            <div class="skill-card reveal">
-                <div class="skill-icon">
-                    <i class="fas fa-laptop-code"></i>
+            <!-- PROYEK 2: Website Pondok Pesantren Al-Ijma -->
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <div class="project-icon"><i class="fas fa-mosque"></i></div>
+                    <div class="project-overlay">
+                        <a href="https://jagoweb35.github.io/Pondok-Pesantren-Al-Ijma/" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
                 </div>
-                <h3>Sistem & Teknologi Informasi</h3>
-                <p>Pengoperasian sistem komputer dan teknologi informasi untuk mendukung operasional.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Support IT / helpdesk</span>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="project-tag">Web</span>
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                    <h3>Website Pondok Pesantren Al-Ijma</h3>
+                    <p>Website resmi Pondok Pesantren Al-Ijma yang menampilkan profil lembaga, program pendidikan, fasilitas, dan informasi donasi untuk mendukung operasional pesantren dengan desain responsif.</p>
+                    <div class="project-stats">
+                        <span><i class="fas fa-globe"></i> Live Website</span>
+                        <span><i class="fas fa-mobile-alt"></i> Responsive</span>
+                    </div>
                 </div>
             </div>
-            <div class="skill-card reveal">
-                <div class="skill-icon">
-                    <i class="fas fa-brain"></i>
+            <!-- PROYEK 3: Website SMP Boarding School RABBANY -->
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <div class="project-icon"><i class="fas fa-school"></i></div>
+                    <div class="project-overlay">
+                        <a href="https://jagoweb35.github.io/SMP-Boarding-School-RABBANY/" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
                 </div>
-                <h3>Artificial Intelligence</h3>
-                <p>Pengetahuan tentang konsep AI, machine learning, dan penerapannya dalam konteks teknologi informasi.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">Python</span>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="project-tag">Web</span>
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Responsive</span>
+                    </div>
+                    <h3>Website SMP Boarding School RABBANY</h3>
+                    <p>Website resmi SMP Boarding School RABBANY di Karangpawitan, Garut. Menampilkan profil sekolah, visi & misi, program tahfizh Al-Quran, fasilitas boarding school, dan informasi pendaftaran siswa baru.</p>
+                    <div class="project-stats">
+                        <span><i class="fas fa-globe"></i> Live Website</span>
+                        <span><i class="fas fa-star"></i> Terakreditasi</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -216,30 +412,59 @@
     <section class="experience" id="experience">
         <div class="section-header reveal">
             <span class="section-label">Pengalaman Kerja</span>
-            <h2>Perjalanan Karir Saya</h2>
+            <h2>Perjalanan <span class="highlight">Karir</span></h2>
             <p>Pengalaman magang yang membentuk keahlian profesional saya.</p>
         </div>
         <div class="timeline">
             <div class="timeline-item reveal">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <span class="timeline-date">2023 - 2024</span>
-                    <h3>IT Support (Magang)</h3>
+                    <div class="timeline-header">
+                        <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
+                        <div class="timeline-meta">
+                            <span class="timeline-date">2023 - 2024</span>
+                            <span class="timeline-type">Magang</span>
+                        </div>
+                    </div>
+                    <h3>IT Support</h3>
                     <h4>PT Langgeng Sejahtera Kreasi Komputasi</h4>
                     <p>
-                        Berperan dalam pengembangan proyek deteksi angka pada meteran air analog berbasis teknologi informasi untuk membantu proses pembacaan meter secara otomatis. Membantu instalasi, pengecekan, dan troubleshooting perangkat komputer serta melakukan input, pengolahan, dan validasi 100+ data proyek dan pengujian sistem secara teliti agar hasil sesuai kebutuhan perusahaan dan operasional berjalan dengan baik.
+                        Berperan dalam pengembangan proyek deteksi angka pada meteran air analog berbasis teknologi informasi 
+                        untuk membantu proses pembacaan meter secara otomatis. Membantu instalasi, pengecekan, dan troubleshooting 
+                        perangkat komputer serta melakukan input, pengolahan, dan validasi 100+ data proyek dan pengujian sistem 
+                        secara teliti agar hasil sesuai kebutuhan perusahaan dan operasional berjalan dengan baik.
                     </p>
+                    <div class="timeline-tags">
+                        <span>AI Development</span>
+                        <span>Data Processing</span>
+                        <span>IT Support</span>
+                        <span>System Testing</span>
+                    </div>
                 </div>
             </div>
             <div class="timeline-item reveal">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <span class="timeline-date">2019 - 2020</span>
-                    <h3>Sortir & Staff Gudang (Magang)</h3>
+                    <div class="timeline-header">
+                        <div class="timeline-icon"><i class="fas fa-boxes"></i></div>
+                        <div class="timeline-meta">
+                            <span class="timeline-date">2019 - 2020</span>
+                            <span class="timeline-type">Magang</span>
+                        </div>
+                    </div>
+                    <h3>Sortir & Staff Gudang</h3>
                     <h4>PT Pos Indonesia</h4>
                     <p>
-                        Mendukung operasional gudang dan distribusi dengan melakukan pengecekan, penyortiran, serta pencatatan barang secara teliti. Terbiasa melakukan input dan rekap 200+ data barang/paket per minggu ke dalam sistem operasional, memastikan data sesuai dengan dokumen pengiriman serta membantu kelancaran proses distribusi agar tepat waktu dan sesuai target kerja.
+                        Mendukung operasional gudang dan distribusi dengan melakukan pengecekan, penyortiran, serta pencatatan barang secara teliti. 
+                        Terbiasa melakukan input dan rekap 200+ data barang/paket per minggu ke dalam sistem operasional, 
+                        memastikan data sesuai dengan dokumen pengiriman serta membantu kelancaran proses distribusi agar tepat waktu dan sesuai target kerja.
                     </p>
+                    <div class="timeline-tags">
+                        <span>Data Entry</span>
+                        <span>Inventory</span>
+                        <span>Logistics</span>
+                        <span>Quality Control</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -249,62 +474,48 @@
     <section class="certificates" id="certificates">
         <div class="section-header reveal">
             <span class="section-label">Sertifikat</span>
-            <h2>Sertifikat & Pelatihan</h2>
+            <h2>Sertifikat & <span class="highlight">Pelatihan</span></h2>
             <p>Bukti kompetensi dan pengembangan diri yang telah saya capai.</p>
         </div>
         <div class="certificates-grid">
             <div class="cert-card reveal">
+                <div class="cert-badge">
+                    <i class="fas fa-award"></i>
+                </div>
                 <div class="cert-icon">
                     <i class="fas fa-certificate"></i>
                 </div>
                 <div class="cert-content">
                     <h3>Sertifikat Kompetensi Keahlian</h3>
-                    <p>Sertifikat kompetensi bidang teknologi informasi yang memvalidasi keahlian profesional saya.</p>
-                    <a href="https://drive.google.com/file/d/1yotaROkqpZZuN_O9GJSs_vr5v1Fbpjll/view?usp=drive_link" target="_blank" class="cert-link">
-                        <i class="fas fa-external-link-alt"></i>
-                        Lihat Sertifikat
-                    </a>
+                    <p>Sertifikat kompetensi bidang teknologi informasi yang memvalidasi keahlian profesional saya dalam dunia kerja.</p>
+                    <div class="cert-footer">
+                        <span class="cert-date"><i class="far fa-calendar-alt"></i> 2023</span>
+                        <a href="https://drive.google.com/file/d/1yotaROkqpZZuN_O9GJSs_vr5v1Fbpjll/view?usp=drive_link" target="_blank" class="cert-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Lihat Sertifikat
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="cert-card reveal">
+                <div class="cert-badge">
+                    <i class="fas fa-award"></i>
+                </div>
                 <div class="cert-icon">
                     <i class="fas fa-file-excel"></i>
                 </div>
                 <div class="cert-content">
                     <h3>Pelatihan Excel Admin Keuangan</h3>
-                    <p>Pelatihan intensif penggunaan Microsoft Excel untuk kebutuhan administrasi dan keuangan.</p>
-                    <a href="https://drive.google.com/file/d/1_uaP0WmWKiEXiMEoLjd8zoLAzrHhC-JD/view?usp=drive_link" target="_blank" class="cert-link">
-                        <i class="fas fa-external-link-alt"></i>
-                        Lihat Sertifikat
-                    </a>
-                </div>
-            <!-- </div>
-            <div class="cert-card reveal">
-                <div class="cert-icon">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <div class="cert-content">
-                    <h3>Pelatihan Artificial Intelligence</h3>
-                    <p>Pelatihan dan workshop tentang penerapan AI dan machine learning dalam industri.</p>
-                    <a href="https://drive.google.com/file/d/CONTOH_LINK_3/view?usp=sharing" target="_blank" class="cert-link">
-                        <i class="fas fa-external-link-alt"></i>
-                        Lihat Sertifikat
-                    </a>
+                    <p>Pelatihan intensif penggunaan Microsoft Excel untuk kebutuhan administrasi dan keuangan profesional.</p>
+                    <div class="cert-footer">
+                        <span class="cert-date"><i class="far fa-calendar-alt"></i> 2026</span>
+                        <a href="https://drive.google.com/file/d/1_uaP0WmWKiEXiMEoLjd8zoLAzrHhC-JD/view?usp=drive_link" target="_blank" class="cert-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Lihat Sertifikat
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="cert-card reveal">
-                <div class="cert-icon">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <div class="cert-content">
-                    <h3>Sertifikat Web Development</h3>
-                    <p>Sertifikat kelulusan kursus pengembangan web dasar menggunakan HTML, CSS, dan JavaScript.</p>
-                    <a href="https://drive.google.com/file/d/CONTOH_LINK_4/view?usp=sharing" target="_blank" class="cert-link">
-                        <i class="fas fa-external-link-alt"></i>
-                        Lihat Sertifikat
-                    </a>
-                </div>
-            </div> -->
         </div>
     </section>
 
@@ -312,26 +523,42 @@
     <section class="education" id="education">
         <div class="section-header reveal">
             <span class="section-label">Pendidikan</span>
-            <h2>Riwayat Pendidikan</h2>
+            <h2>Riwayat <span class="highlight">Pendidikan</span></h2>
             <p>Latar belakang akademik yang mendukung karir saya.</p>
         </div>
-        <div class="edu-card reveal">
-            <div class="edu-icon">
-                <i class="fas fa-university"></i>
-            </div>
-            <div class="edu-info">
-                <h3>Institut Teknologi Garut</h3>
-                <h4>S1 - Teknik Informatika (Konsentrasi AI)</h4>
-                <span class="edu-date"><i class="far fa-calendar-alt" style="margin-right: 0.3rem;"></i>2020 - 2024</span>
+        <div class="edu-container">
+            <div class="edu-card reveal">
+                <div class="edu-timeline">
+                    <div class="edu-line"></div>
+                    <div class="edu-dot"></div>
+                </div>
+                <div class="edu-content">
+                    <div class="edu-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="edu-info">
+                        <h3>Institut Teknologi Garut</h3>
+                        <h4>S1 - Teknik Informatika (Konsentrasi AI)</h4>
+                        <div class="edu-meta">
+                            <span class="edu-date"><i class="far fa-calendar-alt"></i> 2020 - 2024</span>
+                            <span class="edu-status"><i class="fas fa-check-circle"></i> Lulus</span>
+                        </div>
+                        <p>Fokus pada Artificial Intelligence, Machine Learning, Data Processing, dan Teknologi Informasi dengan praktik langsung dalam proyek deteksi meteran air analog.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
+        <div class="contact-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
         <div class="section-header reveal">
             <span class="section-label">Kontak</span>
-            <h2>Mari Terhubung</h2>
+            <h2>Mari <span class="highlight">Terhubung</span></h2>
             <p>Silakan hubungi saya untuk diskusi lebih lanjut tentang peluang kerja sama.</p>
         </div>
         <div class="contact-grid reveal">
@@ -363,29 +590,55 @@
                         </div>
                         <div class="contact-item-info">
                             <h4>Lokasi</h4>
-                            <p>Garut, Indonesia</p>
+                            <p>Garut, Jawa Barat, Indonesia</p>
                         </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-item-info">
+                            <h4>Ketersediaan</h4>
+                            <p>Senin - Jumat, 08:00 - 17:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-social">
+                    <h4>Ikuti Saya</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/628997480801" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:mfitrohsodikin@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
             <form class="contact-form" id="contactForm">
+                <div class="form-header">
+                    <h3>Kirim Pesan</h3>
+                    <p>Isi form di bawah ini dan saya akan merespons secepatnya.</p>
+                </div>
                 <div class="form-group">
                     <label for="name">Nama Lengkap</label>
                     <input type="text" id="name" placeholder="Masukkan nama Anda" required>
+                    <i class="fas fa-user form-icon"></i>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" placeholder="Masukkan email Anda" required>
+                    <i class="fas fa-envelope form-icon"></i>
                 </div>
                 <div class="form-group">
                     <label for="subject">Subjek</label>
                     <input type="text" id="subject" placeholder="Subjek pesan" required>
+                    <i class="fas fa-tag form-icon"></i>
                 </div>
                 <div class="form-group">
                     <label for="message">Pesan</label>
                     <textarea id="message" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                    <i class="fas fa-comment form-icon"></i>
                 </div>
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-primary btn-full magnetic-btn">
                     <i class="fas fa-paper-plane"></i>
                     Kirim Pesan
                 </button>
@@ -397,26 +650,35 @@
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
-                <a href="#" class="logo">Fitroh</a>
+                <a href="#" class="logo">
+                    <span class="logo-icon">F</span>
+                </a>
                 <p>Lulusan Teknik Informatika - AI dengan fokus pada pengolahan data, IT support, dan administrasi.</p>
             </div>
-            <div class="social-links">
-                <!-- <a href="#" target="_blank" title="Portofolio">
-                    <i class="fas fa-folder-open"></i>
-                </a> -->
-                <a href="#certificates" title="Sertifikat">
-                    <i class="fas fa-certificate"></i>
-                </a>
-                <a href="mailto:mfitrohsodikin@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://wa.me/628997480801" target="_blank" title="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
+            <div class="footer-links">
+                <h4>Tautan Cepat</h4>
+                <ul>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#skills">Keahlian</a></li>
+                    <li><a href="#projects">Proyek</a></li>
+                    <li><a href="#experience">Pengalaman</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Kontak</h4>
+                <p><i class="fas fa-envelope"></i> mfitrohsodikin@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +62 899 7480 801</p>
+                <p><i class="fas fa-map-marker-alt"></i> Garut, Indonesia</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p> 2026 M Fitroh Sodikin. Dibuat dengan dedikasi untuk karir profesional.</p>
+            <p> 2026 M Fitroh Sodikin. Dibuat dengan <i class="fas fa-heart"></i> dan dedikasi untuk karir profesional.</p>
+            <div class="footer-social">
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://wa.me/628997480801" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
         </div>
     </footer>
 
@@ -424,6 +686,15 @@
     <button class="scroll-top" id="scrollTop">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="toast-content">
+            <h4>Berhasil!</h4>
+            <p>Pesan Anda telah terkirim.</p>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
